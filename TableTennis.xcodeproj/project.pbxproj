@@ -188,6 +188,7 @@
 		2D3C8D6817C73C6D00F34C31 /* IntroLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2D3C8D6717C73C6D00F34C31 /* IntroLayer.mm */; };
 		2D3C8D6B17C73C6D00F34C31 /* GLES-Render.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2D3C8D6A17C73C6D00F34C31 /* GLES-Render.mm */; };
 		2D3C8D6D17C73C6D00F34C31 /* blocks.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D3C8D6C17C73C6D00F34C31 /* blocks.png */; };
+		2DFAE06C17C755D60060029B /* Ball.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAE06B17C755D60060029B /* Ball.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -569,6 +570,8 @@
 		2D3C8D6917C73C6D00F34C31 /* GLES-Render.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GLES-Render.h"; sourceTree = "<group>"; };
 		2D3C8D6A17C73C6D00F34C31 /* GLES-Render.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "GLES-Render.mm"; sourceTree = "<group>"; };
 		2D3C8D6C17C73C6D00F34C31 /* blocks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blocks.png; path = Resources/blocks.png; sourceTree = "<group>"; };
+		2DFAE06A17C755D60060029B /* Ball.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ball.h; sourceTree = "<group>"; };
+		2DFAE06B17C755D60060029B /* Ball.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Ball.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -635,6 +638,8 @@
 				2D3C8D6417C73C6D00F34C31 /* HelloWorldLayer.mm */,
 				2D3C8D6617C73C6D00F34C31 /* IntroLayer.h */,
 				2D3C8D6717C73C6D00F34C31 /* IntroLayer.mm */,
+				2DFAE06A17C755D60060029B /* Ball.h */,
+				2DFAE06B17C755D60060029B /* Ball.mm */,
 				2D3C8D6917C73C6D00F34C31 /* GLES-Render.h */,
 				2D3C8D6A17C73C6D00F34C31 /* GLES-Render.mm */,
 				2D3C8B3D17C73C6900F34C31 /* Resources */,
@@ -1416,6 +1421,7 @@
 				2D3C8D6517C73C6D00F34C31 /* HelloWorldLayer.mm in Sources */,
 				2D3C8D6817C73C6D00F34C31 /* IntroLayer.mm in Sources */,
 				2D3C8D6B17C73C6D00F34C31 /* GLES-Render.mm in Sources */,
+				2DFAE06C17C755D60060029B /* Ball.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

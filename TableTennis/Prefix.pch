@@ -11,4 +11,7 @@
 #ifdef __OBJC__
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#define PTM_RATIO 32
+#define SCREEN_WIDTH [CCDirector sharedDirector].winSize.width
+#define SCREEN_HEIGHT [CCDirector sharedDirector].winSize.height
 #endif

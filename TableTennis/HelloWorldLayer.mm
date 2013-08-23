@@ -15,6 +15,7 @@
 // Needed to obtain the Navigation Controller
 #import "AppDelegate.h"
 
+#import "Ball.h"
 
 enum {
 	kTagParentNode = 1,
@@ -76,12 +77,8 @@ enum {
 		[self addChild:parent z:0 tag:kTagParentNode];
 		
 		
-		[self addNewSpriteAtPosition:ccp(s.width/2, s.height/2)];
-		
-		CCLabelTTF *label = [CCLabelTTF labelWithString:@"Tap screen" fontName:@"Marker Felt" fontSize:32];
-		[self addChild:label z:0];
-		[label setColor:ccc3(0,0,255)];
-		label.position = ccp( s.width/2, s.height-50);
+//		[self addNewSpriteAtPosition:ccp(s.width/2, s.height/2)];
+		[self addBall];
 		
 		[self scheduleUpdate];
 	}
@@ -200,12 +197,12 @@ enum {
 	groundBody->CreateFixture(&groundBox,0);
 	
 	// left
-	groundBox.Set(b2Vec2(0,s.height/PTM_RATIO), b2Vec2(0,0));
-	groundBody->CreateFixture(&groundBox,0);
+//	groundBox.Set(b2Vec2(0,s.height/PTM_RATIO), b2Vec2(0,0));
+//	groundBody->CreateFixture(&groundBox,0);
 	
 	// right
-	groundBox.Set(b2Vec2(s.width/PTM_RATIO,s.height/PTM_RATIO), b2Vec2(s.width/PTM_RATIO,0));
-	groundBody->CreateFixture(&groundBox,0);
+//	groundBox.Set(b2Vec2(s.width/PTM_RATIO,s.height/PTM_RATIO), b2Vec2(s.width/PTM_RATIO,0));
+//	groundBody->CreateFixture(&groundBox,0);
 }
 
 -(void) draw
@@ -263,6 +260,11 @@ enum {
 
 }
 
+- (void)addBall
+{
+    Ball *ball = [[Ball alloc] initWithWorld:world];
+    [self addChild:ball];
+}
 -(void) update: (ccTime) dt
 {
 	//It is recommended that a fixed time step is used with Box2D for stability
@@ -286,7 +288,8 @@ enum {
 		
 		location = [[CCDirector sharedDirector] convertToGL: location];
 		
-		[self addNewSpriteAtPosition: location];
+//		[self addNewSpriteAtPosition: location];
+        [self addBall];
 	}
 }
 
@@ -306,11 +309,11 @@ enum {
 
 #pragma mark - UIAccelerometerDelegate
 
-- (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration
-{
-    b2Vec2 gravity;
-	gravity.Set(acceleration.y * 1000, - acceleration.x * 1000);
-	world->SetGravity(gravity);
-    NSLog(@"%f, %f, %f",acceleration.x, acceleration.y, acceleration.z);
-}
+//- (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration
+//{
+//    b2Vec2 gravity;
+//	gravity.Set(acceleration.y * 1000, - acceleration.x * 1000);
+//	world->SetGravity(gravity);
+//    NSLog(@"%f, %f, %f",acceleration.x, acceleration.y, acceleration.z);
+//}
 @end
